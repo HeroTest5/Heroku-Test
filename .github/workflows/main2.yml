@@ -11,10 +11,13 @@ jobs:
         wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
     - name: Downloading
       run: |
-        pwd
         ls
         mkdir drive
+        echo drivecreated
         ls
+        
         rclone mount Shared: drive --vfs-cache-mode writes --daemon --config=rclone.conf
+        echo rclonemounted
         cd drive
+        echo insidedrive
         ls
