@@ -10,6 +10,7 @@ ENV TZ=Asia/Kolkata
 
 RUN apt update
 RUN apt install rclone
+RUN apt install wget
     
 RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 
