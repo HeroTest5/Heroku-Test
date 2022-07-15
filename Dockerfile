@@ -21,7 +21,12 @@ RUN apt -qq update --fix-missing && \
     python3 \
     python3-pip \
     rclone
+
+COPY . .
     
 RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 
-COPY . .
+RUN mkdir drive
+RUN rclone mount Shared: drive --vfs-cache-mode writes --daemon --config=rclone.conf
+RUN cd drive
+RUN ls
