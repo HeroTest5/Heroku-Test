@@ -9,5 +9,7 @@ jobs:
         sudo apt update
         sudo apt install rclone
         wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
+    - name: Downloading
+      run: |
         rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness:"Ben 10" --config=rclone.conf --drive-acknowledge-abuse
         rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness1:"Ben 10" --config=rclone.conf --drive-acknowledge-abuse
