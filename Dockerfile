@@ -8,9 +8,11 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
 
-RUN apt update
-RUN apt install rclone
-RUN apt install wget
+RUN apt -qq update --fix-missing && \
+    apt -qq install -y git \
+    aria2 \
+    wget \
+    rclone
     
 RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 
