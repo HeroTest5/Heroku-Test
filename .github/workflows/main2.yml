@@ -13,14 +13,5 @@ jobs:
     - name: Downloading
       run: |
         ls
-        mkdir drive
-        echo drivecreated
-        ls
-        
-        rclone mount Shared: drive --vfs-cache-mode writes --daemon --config=rclone.conf
-        echo rclonemounted
-        cd drive
-        echo insidedrive
-        ls
         rclone config --config=rclone.conf
  
