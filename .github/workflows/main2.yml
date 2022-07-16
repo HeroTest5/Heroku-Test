@@ -9,9 +9,8 @@ jobs:
         sudo apt update
         sudo apt install rclone
         sudo apt install wget
-        wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
     - name: Downloading
       run: |
-        ls
-        rclone config --config=rclone.conf
- 
+        wget https://raw.githubusercontent.com/HeroTest5/Heroku-Test/main/mount.sh
+        sudo chmod 777 mount.sh
+        sudo bash mount.sh
