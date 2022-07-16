@@ -22,4 +22,5 @@ jobs:
         cd drive
         echo insidedrive
         ls
-        rclone config
+        rclone config --config=rclone.conf
+ 
