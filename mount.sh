@@ -4,5 +4,5 @@ mkdir drive
 rclone mount Shared: drive --vfs-cache-mode writes --daemon --config=rclone.conf
 cd drive
 pwd
-ls frive
-ls -R drive
+ls -al
+
