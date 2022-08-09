@@ -16,8 +16,9 @@ RUN apt -qq update --fix-missing && \
     
 RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 
-RUN mkdir drive
+RUN PWD
+
 RUN rclone mount Shared: drive --vfs-cache-mode writes --daemon --config=rclone.conf
-RUN cd drive
-RUN ls
-RUN ls drive
+RUN rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" Shared2:"Ben 10" --config=rclone.conf --drive-acknowledge-abuse
+RUN rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness1:"Ben 10" --config=rclone.conf --drive-acknowledge-abuse
+RUN rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness:"Ben 10" --config=rclone.conf --drive-acknowledge-abuse
