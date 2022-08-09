@@ -16,6 +16,3 @@ RUN apt -qq update --fix-missing && \
     
 RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 COPY . .
-RUN PWD
-
-
